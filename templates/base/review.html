@@ -1,0 +1,10 @@
+<div class="row">
+	<div class="col-md-8">
+	<h3>{{ review.user.get_full_name }} <a class="subheading"> | {{ review.created_at | date }}</a></h3>
+	</div>
+	<div class="col-md-4 text-right">
+	<h3>{% include 'base/rating.html' with rating=review.rating %}</h3>
+	</div>
+
+</div>
+<p>{{ review.description }}</p>
